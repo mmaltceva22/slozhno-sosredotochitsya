@@ -1,5 +1,257 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
+.body { 
+  margin: 0px;
+  padding: 10px;
+}
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+   background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+ 
+}
+.header{
+  /* background-image: var(--background-image); */
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+
+ /*  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed; */
+
+}
+/* .rec-container {
+  
+ position: absolute; 
+   display: inline-block; 
+   
+}
+.decorated-text {
+  color: var(--accent-color);
+  Width: 52px;
+  Height: 26px;
+}
+.decorated-text::after {
+  content: "";
+  outline: 1px solid var(--accent-color);
+
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10;
+
+} */
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/rec.svg);
+  width: 61px;
+  height: 26px;
+  top: 0px;
+  right: 0px;
+
+}
+
+.decorated-zone::before{
+  content: "";
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+ bottom: 0; 
+  left: 0px;
+
+}
+.header__theme-menu {
+  align-self: center;
+}
+
+.header__theme-menu-list {
+ 
+  list-style-type: none;
+  background-color: unset;
+  display: grid;
+  gap: 10px;
+ 
+}
+.header__theme-menu-item {
+  justify-self: end;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  font-family: var(--font-family), sans-serif;
+  background-color: unset;
+  border: none;
+  padding: 1.5px 13px 1.5px 13px;
+  /* margin-bottom: 10px; */
+font-size: 18px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color);
+}
+.header__theme-menu-button:focus-visible {
+  text-decoration: underline;
+}
+.header__theme-menu-button_active {
+  pointer-events: none
+}
+.heder-title {
+  color: #DB00FF;
+  font-family: var(--font-family);
+font-size: /* 116px */ clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+font-weight: 700;
+line-height: 96px;
+letter-spacing: 0em;
+text-align: left;
+text-shadow: 4px 4px 0 var(--accent-color);
+margin: 0;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: #000028;
+  font-family: var(--font-family);
+  list-style-type: none;
+}
+.section-title {
+  font-family: var(--font-family);
+  color: var(--main-text-color);
+}
+
+.header-description {
+
+font-size: 18px;
+font-weight: 700;
+line-height: 23px;
+letter-spacing: 0em;
+text-align: left;
+margin-top: 55px;
+margin-bottom: 66px;
+
+}
+.content {
+/*   margin-left: 10px;
+  margin-right: 10px; */
+}
+
+.why {
+  margin: 0px;
+    display: grid;
+}
+
+.why_section-list {
+  margin: 0px;
+  padding: 0px;
+    list-style-type: none;
+}
+/* .why_title {
+  grid-area: why_title;
+} */
+.section-description {
+color: var(--main-text-color);
+}
+.link {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color);
+  color: var(--main-text-color);
+}
+.link:hover {
+  text-decoration: underline;
+}
+.link:focus {
+  outline: 1px solid var(--main-text-color);
+}
+.what {
+  display: grid;
+}
+
+.what_section-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.how {
+  display: grid;
+}
+.how_section-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.image{
+ 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  
+}
+.section__image {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer-title {
+  color: #DB00FF;
+  font-family: var(--font-family);
+font-size: 116px;
+font-weight: 700;
+line-height: 96px;
+letter-spacing: 0em;
+text-align: center;
+text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+@media (500px <= width < 1024px) {
+  /* .header__theme-menu-list {
+    
+
+  } */
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+.header__theme-menu {
+  grid-column: 1 / -1;
+}
+.heder-title {
+  grid-column: 1 / -1;
+}
+.header-description{
+  grid-column: 2 / -1;
+}
+  .why {
+    
+    grid-template-columns: 1fr 2fr;
+   gap: 20px;
+   
+  }
+  .why_title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    color: var(--accent-color);
+  }
 }
