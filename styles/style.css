@@ -1,14 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-.body { 
-  margin: 0px;
-  padding: 10px;
-}
+
 .page {
    background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+  font-family: var(--font-family), sans-serif; 
+  margin: 0px;
+  padding: 10px;
  
 }
 .header{
@@ -17,34 +17,8 @@
   grid-template-rows: repeat(3, 1fr);
   position: relative;
 
- /*  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  background-attachment: fixed; */
-
 }
-/* .rec-container {
-  
- position: absolute; 
-   display: inline-block; 
-   
-}
-.decorated-text {
-  color: var(--accent-color);
-  Width: 52px;
-  Height: 26px;
-}
-.decorated-text::after {
-  content: "";
-  outline: 1px solid var(--accent-color);
 
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 10px;
-  right: 10;
-
-} */
 .decorated-zone::after {
   content: "";
   position: absolute;
@@ -119,17 +93,6 @@ text-shadow: 4px 4px 0 var(--accent-color);
 margin: 0;
 }
 
-.title-decor {
-  background-color: var(--accent-color);
-  color: #000028;
-  font-family: var(--font-family);
-  list-style-type: none;
-}
-.section-title {
-  font-family: var(--font-family);
-  color: var(--main-text-color);
-}
-
 .header-description {
 
 font-size: 18px;
@@ -146,20 +109,37 @@ margin-bottom: 66px;
   margin-right: 10px; */
 }
 
-.why {
+.section {
   margin: 0px;
     display: grid;
 }
 
-.why_section-list {
+.title-decor {
+  background-color: var(--accent-color);
+  color: #000028;
+  font-family: var(--font-family);
+  list-style-type: none;
+}
+
+.section__title {
+  font-family: var(--font-family);
+  color: var(--main-text-color);
+  grid-column: 1 / 2;
+  color: var(--accent-color);
+}
+
+
+.section__list {
   margin: 0px;
   padding: 0px;
     list-style-type: none;
 }
-/* .why_title {
-  grid-area: why_title;
-} */
-.section-description {
+
+.section__list_full {
+  grid-column: 1 / -1;
+}
+
+.section__description {
 color: var(--main-text-color);
 }
 .link {
@@ -203,16 +183,6 @@ color: var(--main-text-color);
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
 .footer-title {
   color: #DB00FF;
   font-family: var(--font-family);
@@ -225,10 +195,7 @@ text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 @media (500px <= width < 1024px) {
-  /* .header__theme-menu-list {
-    
-
-  } */
+  
   .header {
     grid-template-columns: repeat(2, 1fr);
     
@@ -242,16 +209,67 @@ text-shadow: 4px 4px 0 var(--accent-color);
 .header-description{
   grid-column: 2 / -1;
 }
-  .why {
+  .section {
     
     grid-template-columns: 1fr 2fr;
    gap: 20px;
-   
+
   }
-  .why_title {
+  .section__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 23.4px;
-    color: var(--accent-color);
+
   }
+ 
+
+}
+@media (1024px <= width) {
+  .section__list_full {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+  }
+}
+
+@media (500px <=width) {
+  .image {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content 3fr 3fr 4fr;
+    row-gap: 25px;
+    column-gap: 19px;
+  }
+  .image__title {
+    grid-column: 1 / -1;
+  }
+  .section__image {
+    height: 100%;
+    object-fit: cover;
+  }
+  .section__image-sunset {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+  .section__image-ice-cream {
+    grid-row: 2 / 4;
+    grid-column: 3 / 4
+
+  }
+  .section__image-tape {
+    grid-row: 3 / 5;
+    grid-column: 1 / 2;
+
+  }
+  .section__image-books {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+
+  }
+  .section__image-street {
+    grid-row: 4 / 5;
+    grid-column: 2 / 4;
+
+  }
+
 }
