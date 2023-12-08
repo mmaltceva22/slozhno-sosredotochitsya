@@ -1,9 +1,8 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+
 :root {
   --accent-color: #ff0070;
+  --text-shadow-color:  #ff0070;
+  --decor-element-color:  #ff0070;
   --main-text-color:#F1B2CE;
   --title-text-color-bright:#FF0070;
   --title-text-color-dark: #000028;

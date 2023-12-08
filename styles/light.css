@@ -1,12 +1,77 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: #ff8dcb;
+  --text-shadow-color: #ff0070;
+  --decor-element-color: #353430;
+  --main-text-color: #353430;
+  --title-text-color-dark: #000028;
+  --font-family: "IBM Plex mono";
+  --title-text-color-bright: #353430;
+  --background-image: url(../images/cover-image-light.png);
+}
+
+.page.theme_light .decorated-zone::after {
+  border-top: 1px solid var(--decor-element-color);
+  border-right: 1px solid var(--decor-element-color);
+  width: 20px;
+  height: 20px;
+  background-image: none;
+}
+.page.theme_light .section__title {
+  color: var(--main-text-color);
+  color: var(--title-text-color-bright);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --main-text-color: #353430;
+    --decor-element-color: #353430;
+    --title-text-color-bright: #353430;
+    --title-text-color-dark: #000028;
+    --background-image: url(../images/cover-image-light.png);
+  }
+  .decorated-zone::after {
+    border-top: 1px solid var(--decor-element-color);
+    border-right: 1px solid var(--decor-element-color);
+    width: 20px;
+    height: 20px;
+    background-image: none;
+  }
+  .decorated-zone::before {
+    content: "";
+    border-bottom: 1px solid var(--decor-element-color);
+    border-left: 1px solid var(--decor-element-color);
+  }
+  .header__theme-menu-button {
+    color: var(--title-text-color-bright);
+  }
+
+  .header__theme-menu-button:active {
+    outline: 1px solid var(--decor-element-color);
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid var(--decor-element-color);
+  }
+  .heder-title {
+    color: #ffc2e6;
+  }
+  .title-decor {
+    background-color: var(--accent-color);
+  }
+  .page.theme_light .section__title {
+    color: var(--main-text-color);
+    color: var(--title-text-color-bright);
+  }
+  .footer-title {
+    color: #ffc2e6;
+  }
+  .decorated-zone-footer::before {
+    border-top: 1px solid var(--decor-element-color);
+    border-right: 1px solid var(--decor-element-color);
+  }
+  .decorated-zone-footer::after {
+    border-bottom: 1px solid var(--decor-element-color);
+    border-left: 1px solid var(--decor-element-color);
+  }
 }
