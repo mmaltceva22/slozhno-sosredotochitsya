@@ -17,8 +17,7 @@
   background-image: none;
 }
 .page.theme_light .section__title {
-  color: var(--main-text-color);
-  color: var(--title-text-color-bright);
+ color: var(--title-text-color-bright);
 }
 
 @media (prefers-color-scheme: light) {
