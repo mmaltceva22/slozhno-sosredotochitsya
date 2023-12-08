@@ -59,7 +59,7 @@
     background-color: var(--accent-color);
   }
   .page.theme_light .section__title {
-    color: var(--main-text-color);
+   
     color: var(--title-text-color-bright);
   }
   .footer-title {
