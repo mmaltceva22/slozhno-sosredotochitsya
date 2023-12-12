@@ -10,7 +10,8 @@
 }
 .page.theme_dark .page {
   background-color: #000028;
-  background-image: var(--background-image); }
+  background-image: var(--background-image);
+}
 
 .page.theme_dark .heder-title {
   color: #db00ff;
@@ -18,8 +19,6 @@
 .page.theme_dark .decorated-zone::after {
   width: 20px;
   height: 20px;
-
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,8 +40,6 @@
     border: none;
     width: 20px;
     height: 20px;
-
-   
   }
   .decorated-zone::before {
     border-bottom: 1px solid var(--decor-element-color);
