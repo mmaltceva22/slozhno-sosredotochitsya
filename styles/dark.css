@@ -8,14 +8,17 @@
   --font-family: "IBM Plex mono";
   --background-image: url(../images/cover-image-dark.png);
 }
+.page.theme_dark .page {
+  background-color: #000028;
+  background-image: var(--background-image); }
+
 .page.theme_dark .heder-title {
   color: #db00ff;
 }
 .page.theme_dark .decorated-zone::after {
-  border: none;
   width: 20px;
   height: 20px;
-  background-image: url(../images/rec.svg);
+
   
 }
 
@@ -38,7 +41,7 @@
     border: none;
     width: 20px;
     height: 20px;
-    background-image: url(../images/rec.svg);
+
    
   }
   .decorated-zone::before {

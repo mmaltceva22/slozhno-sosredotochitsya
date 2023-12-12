@@ -8,6 +8,14 @@
   --title-text-color-bright: #353430;
   --background-image: url(../images/cover-image-light.png);
 }
+.page.theme_light .page {
+  --background-image: url(../images/cover-image-light.png);
+}
+.page.theme_light .rec-container{
+  visibility: hidden;
+}
+
+
 
 .page.theme_light .decorated-zone::after {
   border-top: 1px solid var(--decor-element-color);
@@ -28,6 +36,13 @@
     --title-text-color-bright: #353430;
     --title-text-color-dark: #000028;
     --background-image: url(../images/cover-image-light.png);
+  }
+ .page {
+    --background-image: url(../images/cover-image-light.png);
+    background-color: #fff1f7;
+  }
+  .rec-container{
+    visibility: hidden;
   }
   .decorated-zone::after {
     border-top: 1px solid var(--decor-element-color);
