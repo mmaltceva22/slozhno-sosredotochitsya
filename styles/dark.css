@@ -12,15 +12,21 @@
   background-color: #000028;
   background-image: var(--background-image);
 }
-
+.page.theme_dark .rec-container {
+  visibility: visible;
+}
 .page.theme_dark .heder-title {
   color: #db00ff;
+  text-shadow: 4px 4px 0 var(--text-shadow-color);
 }
 .page.theme_dark .decorated-zone::after {
   width: 20px;
   height: 20px;
 }
-
+.page.theme_dark .footer-title {
+  color: #db00ff;
+  text-shadow: 2px 2px 0 var(--text-shadow-color);
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --accent-color: #ff0070;
@@ -35,9 +41,11 @@
   .heder-title {
     color: #db00ff;
   }
+  .rec-container {
+    visibility: visible;
+  }
 
   .decorated-zone::after {
-    border: none;
     width: 20px;
     height: 20px;
   }
@@ -61,6 +69,7 @@
 
   .footer-title {
     color: #db00ff;
+    text-shadow: 2px 2px 0 var(--text-shadow-color);
   }
   .decorated-zone-footer::before {
     border-top: 1px solid var(--decor-element-color);

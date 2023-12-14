@@ -43,7 +43,6 @@ body {
   border-radius: 50%;
   background-color: #ff0070;
   margin: 2px;
-
   box-shadow: 0px 0px 4px 2px #ff0070;
   margin-top: 8px;
   margin-left: 10px;
@@ -97,6 +96,10 @@ body {
   text-align: center;
   cursor: pointer;
 }
+.header__theme-menu-button_active {
+  outline: 1px solid var(--decor-element-color);
+  pointer-events: none;
+}
 .header__theme-menu-button:focus {
   outline: none;
 }
@@ -107,13 +110,12 @@ body {
 .header__theme-menu-button:hover {
   outline: 1px solid var(--decor-element-color);
 }
+
 .header__theme-menu-button:focus-visible {
   text-decoration: underline;
   outline: 1px solid var(--decor-element-color);
 }
-.header__theme-menu-button_active {
-  pointer-events: none;
-}
+
 .heder-title {
   color: #db00ff;
   font-family: var(--font-family), sans-serif;

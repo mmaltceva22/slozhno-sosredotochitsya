@@ -1,6 +1,6 @@
 .page.theme_light {
   --accent-color: #ff8dcb;
-  --text-shadow-color: #ff0070;
+  --text-shadow-color: #ff8dcb;
   --decor-element-color: #353430;
   --main-text-color: #353430;
   --title-text-color-dark: #000028;
@@ -14,6 +14,10 @@
 .page.theme_light .rec-container {
   visibility: hidden;
 }
+.page.theme_light .heder-title {
+  color: #ffc2e6;
+  text-shadow: 4px 4px 0 var(--text-shadow-color);
+}
 
 .page.theme_light .decorated-zone::after {
   border-top: 1px solid var(--decor-element-color);
@@ -25,10 +29,15 @@
 .page.theme_light .section__title {
   color: var(--title-text-color-bright);
 }
+.page.theme_light .footer-title {
+  color: #ffc2e6;
+  text-shadow: 2px 2px 0 var(--text-shadow-color);
+}
 
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
+    --text-shadow-color: #ff8dcb;
     --main-text-color: #353430;
     --decor-element-color: #353430;
     --title-text-color-bright: #353430;
@@ -67,6 +76,7 @@
   }
   .heder-title {
     color: #ffc2e6;
+    text-shadow: 4px 4px 0 var(--text-shadow-color);
   }
   .title-decor {
     background-color: var(--accent-color);
@@ -76,6 +86,7 @@
   }
   .footer-title {
     color: #ffc2e6;
+    text-shadow: 2px 2px 0 var(--text-shadow-color);
   }
   .decorated-zone-footer::before {
     border-top: 1px solid var(--decor-element-color);
