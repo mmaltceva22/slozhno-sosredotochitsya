@@ -113,7 +113,8 @@ body {
 
 .header__theme-menu-button:focus-visible {
   text-decoration: underline;
-  outline: 1px solid var(--decor-element-color);
+  outline: none;
+ 
 }
 
 .heder-title {
